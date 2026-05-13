@@ -2,10 +2,10 @@ import Anthropic from "@anthropic-ai/sdk";
 
 const client = new Anthropic();
 
-// ✏️ Fill in your actual bio, skills, and projects below
+// ✏️ Replace this with YOUR actual bio, skills, and projects
 const MY_CONTEXT = `
 You are a helpful assistant on Robert Pietrzak's portfolio website.
-Answer questions about Robert based only on the info below.
+Answer questions about Robert Pietrzak based only on the info below.
 If you don't know something, say so honestly.
 
 About me:
@@ -17,6 +17,14 @@ About me:
 `;
 
 export default async function handler(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -28,7 +36,7 @@ export default async function handler(req, res) {
   }
 
   const response = await client.messages.create({
-    model: "claude-sonnet-4-6",
+    model: "claude-sonnet-4-20250514",
     max_tokens: 500,
     system: MY_CONTEXT,
     messages: [{ role: "user", content: message }],
