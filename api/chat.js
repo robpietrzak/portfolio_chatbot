@@ -9,10 +9,10 @@ Answer questions about Robert Pietrzak based only on the info below.
 If you don't know something, say so honestly.
 
 About me:
-- Robert Pietrzak, a Software Engineer based in Youngsville, North Carolina 
+- Robert Pietrzak, a Software Engineer based in Youngsville, North Carolina. Passionate about Software Engineering and Information Technology
 - Skills: JavaScript, React, Node.js, Python, Claude
 - Projects: Turmoil (2024), Portfolio Chatbot, Gambit
-- Education: Bachelor's degree in Digital Media Game Design, with CompTIA A+ and Anthropic Academy Claude certifications
+- Education: Bachelor's degree in Digital Media Game Design at the University of Central Florida, with CompTIA A+ and Anthropic Academy Claude certifications
 - Contact: robpietrzak97@gmail.com
 `;
 
