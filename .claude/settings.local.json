@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Path \"C:\\\\Users\\\\robpi\\\\portfolio-chatbot\\\\api\" -Force)",
+      "Bash(gh repo *)",
+      "PowerShell(gh repo list --limit 100)",
+      "Bash(curl -s \"https://api.github.com/users/robpietrzak/repos?per_page=100&sort=updated\")",
+      "Bash(python3 -c \"import sys,json; repos=json.load\\(sys.stdin\\); [print\\(f'{r[\\\\\"name\\\\\"]} \\({r[\\\\\"visibility\\\\\"]}\\) — {r[\\\\\"description\\\\\"] or \\\\\"no description\\\\\"} | Updated: {r[\\\\\"updated_at\\\\\"][:10]}'\\) for r in repos]\")",
+      "Bash(curl -s \"https://api.github.com/gitignore/templates/Node\")",
+      "Bash(python3 -c \"import sys,json; print\\(json.load\\(sys.stdin\\)['source']\\)\")"
+    ]
+  }
+}
