@@ -133,7 +133,8 @@
         body: JSON.stringify({ message: text }),
       });
       const data = await res.json();
-      thinking.textContent = data.reply;
+      const urlPattern = /(https?:\/\/[^\s]+)/g;
+      thinking.innerHTML = data.reply.replace(urlPattern, '<a href="$1" target="_blank" style="color:#5B5BD6;">$1</a>');
     } catch (error) {
       thinking.textContent = "Sorry, something went wrong. Please try again.";
     }
